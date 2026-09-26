@@ -1,5 +1,74 @@
 <img width="1933" height="506" alt="image" src="https://github.com/user-attachments/assets/c68dc798-1b88-48f5-8d61-bdc5c8d1541c" />
 
+# Parcial 2 - Modificaciones realizadas
+
+Para el segundo parcial se implementaron las siguientes mejoras en el sistema:
+
+## Modificación 3 - Indicador de fuerza de contraseña
+
+Se agregó un indicador visual de fuerza de contraseña en el formulario de creación de usuarios.
+
+### Funcionamiento
+
+El indicador se actualiza en tiempo real mientras el usuario escribe la contraseña y evalúa los siguientes criterios:
+
+- Longitud mínima de 8 caracteres.
+- Al menos una letra mayúscula.
+- Al menos un número.
+- Al menos un símbolo.
+
+Dependiendo de los criterios cumplidos, la contraseña se clasifica visualmente como:
+
+- Débil
+- Media
+- Fuerte
+
+Además, se muestra una barra de progreso y los requisitos que la contraseña va cumpliendo.
+
+### Archivo modificado
+
+`resources/views/usuarios/create.blade.php`
+
+---
+
+## Modificación 6 - Contador de caracteres
+
+Se agregó un contador de caracteres en tiempo real al campo Dirección del formulario de creación de clientes.
+
+### Funcionamiento
+
+El campo tiene un límite máximo de 255 caracteres y el contador se actualiza automáticamente mientras el usuario escribe.
+
+El comportamiento visual es:
+
+- De 0 a 219 caracteres: estado normal.
+- De 220 a 254 caracteres: muestra la advertencia "Se está acercando al límite".
+- Al llegar a 255 caracteres: muestra "Límite de caracteres alcanzado".
+- No permite ingresar más de 255 caracteres.
+
+### Archivo modificado
+
+`resources/views/clientes/create.blade.php`
+
+---
+
+## Tecnologías utilizadas
+
+Las dos mejoras fueron implementadas utilizando:
+
+- Laravel Blade
+- JavaScript
+- Bootstrap / AdminLTE
+- HTML
+
+No se agregaron librerías externas para implementar estas funcionalidades.
+
+
+
+
+
+
+
 # Prototipo Sistema de gestión de agua potable.
 
 Universidad Mariano Gálvez de Guatemala, 2026.
